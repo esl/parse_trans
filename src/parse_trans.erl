@@ -550,7 +550,7 @@ apply_F(F, Type, Form, Context, Acc) ->
                    [{type, Type},
                     {context, Context},
                     {acc, Acc},
-                    {apply_f, F},
+                    {apply_f, erlang:fun_info(F)},
                     {form, Form}])
     end.
 
